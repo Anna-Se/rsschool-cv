@@ -1,0 +1,31 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: antiquewhite;
+    padding: 10px;
+    margin: 0 auto;
+}
+.container_main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.container_password {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.block {
+    margin: 10px;
+}
+#btn {
+    background-color: gray;
+}
+.invalidPass {
+    display: none;
+    margin: 0 auto;
+}
+.activ {
+    display: block;
+}
