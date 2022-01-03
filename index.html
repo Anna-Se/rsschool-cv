@@ -8,72 +8,61 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="mainContainer">
-        <div class="container_main">
-            <div class="block">
-                <label for="email">Your email:</label><br>
-                <input type="text" id="email" name="email">
-            </div>
-            <div class="block">
-                <label for="login">Your login:</label><br>
-                <input type="text" id="login" name="login"><br>
-            </div>
-        </div>
-        <div class="container_password">
-            <div class="block">
-                <label for="password">Your password:</label><br>
-                <input type="password" id="password" name="password"><br>
-            </div>
-            <div class="block">
-                <label for="repeatPassword">Repeat password:</label><br>
-                <input type="password" id="repeatPassword" name="repeatPassword"><br>
-            </div>
-        </div>
-        <p class="invalidPass">Пароли не совпадают.</p>
+    <h1>Anna Senkevich</h1>
+    <img src="https://sun9-43.userapi.com/impf/c830108/v830108704/a4de3/Xv360-I_QPk.jpg?size=1080x810&quality=96&sign=e74af6efbb1dedb20f9c9818323ab326&type=album" alt="Photo User">
+    <h4>Front-end developer</h4> 
+    
+    <h2>1. Contacts:</h2>
+    <a href="tel:+375 29 33 22 778">+375 29 33 22 778</a>
+    <br>
+    <a href="mailto: 3322778@gmail.com">e-mail: 3322778@gmail.com</a> 
+    
+    <h2>2. About me:</h2>
+       <p>I am an accountant in the past, this allows me to analyze in detail the processes and break them down into subtasks. I often undertake to do what is new to me. I am not a conflict person, I prefer to avoid unpleasant situations. I am constantly learning something new, traveling. My goal is to create opportunities for development for the people around me. I try to make this goal a reality.</p>
+    
+    <h2>3. Skills:</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Git</li>
+        <li>Markdown</li>
+        <li>JS</li>
+        <li>Photoshop</li>
+        <li>Canva</li>
+        <li>CorelDraw</li>
+        <li>Microsoft Office</li>
+        <li>1c</li>
+    </ul>
 
-        <button id="btn" disabled>Sing up</button>
-    </div>
+    <h2>4. Code examples:</h2>
+    <pre>
+        function isDivideBy(number, a, b) {
+            if (number%a==0 && number%b==0) 
+              return true 
+            else return false
+          }
+    </pre>
+    
+    <h2>5. Experience:</h2>
+    <pre>
+        Solving educational tasks, 
+        setting up 1C for the user, 
+        building operational accounting based on Excel tables.
+    </pre>
+       
+    
+    <h2>6. Aducation:</h2>
+    <ol>
+        <li>Belarussian State Economic Univercity - economist</li>
+        <li>Graduate School of Accountants - professional chief accountant</li>
+        <li>It-step - Internet Marketing</li>
+    </ol>
 
-
-    <script>
-        let email = document.querySelector('#email');
-        let login = document.querySelector('#login');
-        let password = document.querySelector('#password');
-        let repeatPassword = document.querySelector('#repeatPassword');
-        let btn = document.querySelector('#btn');
-        let invalidPass = document.querySelector('.invalidPass');
-
-        let user = {};
+    <h2>7. Languages:</h2>
+    <ul>
+        <li>Russian, Belarussian - native speaker.</li>
+        <li>English - Pre Intermediate</li>
+    </ul>
         
-        function isValid () {
-            if (email.value && login.value && password.value && repeatPassword.value) {
-                btn.disabled = false;
-            } else {
-                btn.disabled = true;
-            }
-        }
-
-        login.addEventListener("input", isValid);
-        email.addEventListener("input", isValid);
-        password.addEventListener("input", isValid);
-        repeatPassword.addEventListener("input", isValid);
-
-        btn.addEventListener("click", function() {
-            if (password.value === repeatPassword.value) {
-                    user = {
-                    login: login.value,
-                    password: password.value,
-                    email: email.value,
-                }
-                alert(`на вашу эл.почту ${email.value} отправлено сообщение с подтверждением`)
-            } else {
-                
-                invalidPass.classList.add("activ");
-                // alert('введен некорректный пароль')
-            }
-            console.log(user);
-        })
-
-    </script>
 </body>
 </html>
