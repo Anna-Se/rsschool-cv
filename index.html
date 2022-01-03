@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="container_main">
+            <div class="block">
+                <label for="email">Your email:</label><br>
+                <input type="text" id="email" name="email">
+            </div>
+            <div class="block">
+                <label for="login">Your login:</label><br>
+                <input type="text" id="login" name="login"><br>
+            </div>
+        </div>
+        <div class="container_password">
+            <div class="block">
+                <label for="password">Your password:</label><br>
+                <input type="password" id="password" name="password"><br>
+            </div>
+            <div class="block">
+                <label for="repeatPassword">Repeat password:</label><br>
+                <input type="password" id="repeatPassword" name="repeatPassword"><br>
+            </div>
+        </div>
+        <p class="invalidPass">Пароли не совпадают.</p>
+
+        <button id="btn" disabled>Sing up</button>
+    </div>
+
+
+    <script>
+        let email = document.querySelector('#email');
+        let login = document.querySelector('#login');
+        let password = document.querySelector('#password');
+        let repeatPassword = document.querySelector('#repeatPassword');
+        let btn = document.querySelector('#btn');
+        let invalidPass = document.querySelector('.invalidPass');
+
+        let user = {};
+        
+        function isValid () {
+            if (email.value && login.value && password.value && repeatPassword.value) {
+                btn.disabled = false;
+            } else {
+                btn.disabled = true;
+            }
+        }
+
+        login.addEventListener("input", isValid);
+        email.addEventListener("input", isValid);
+        password.addEventListener("input", isValid);
+        repeatPassword.addEventListener("input", isValid);
+
+        btn.addEventListener("click", function() {
+            if (password.value === repeatPassword.value) {
+                    user = {
+                    login: login.value,
+                    password: password.value,
+                    email: email.value,
+                }
+                alert(`на вашу эл.почту ${email.value} отправлено сообщение с подтверждением`)
+            } else {
+                
+                invalidPass.classList.add("activ");
+                // alert('введен некорректный пароль')
+            }
+            console.log(user);
+        })
+
+    </script>
+</body>
+</html>
