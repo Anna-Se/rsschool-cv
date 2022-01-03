@@ -31,6 +31,7 @@ function isDivideBy(number, a, b) {
   else return false
 }
 ```
+
 ## 5. Experience:
    Solving educational tasks, setting up 1C for the user, building operational accounting based on Excel tables.
 
