@@ -1,31 +1,111 @@
-.mainContainer {
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth; 
+}
+body {
+    font-family: 'Luxurious Roman', cursive, 'Arial', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #691414;
+    margin: 0; padding: 0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    width: 400px;
+    justify-content: space-between;
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
     background-color: antiquewhite;
-    padding: 10px;
-    margin: 0 auto;
 }
-.container_main {
+.nav__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+.nav__list-item {
+    padding: 0 20px;
+    line-height: 50px;
+}
+.nav__list-item a {
+    color: #40445c;
+    text-decoration: none;  
+    transition: color 0.5s;
+    position: relative;
+}
+.nav__list-item a:hover {
+    color: #f32e2e;
+}
+.main-container { 
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    justify-content: space-between;
 }
-.container_password {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-.block {
-    margin: 10px;
-}
-#btn {
-    background-color: gray;
-}
-.invalidPass {
-    display: none;
-    margin: 0 auto;
-}
-.activ {
+.section {
+    width: 50%;
+    padding: 20px;
+    position: relative;
+    padding-left: 30px;
+} 
+.section::before {
+    background: #40445c;
+    bottom: -14px;
+    content: "";
     display: block;
+    height: 4px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 70%;
+}
+  @media (max-width: 768px) {
+    .section {
+      width: 100%;
+    }
+  }
+#courses li {
+    list-style-type: none;
+}
+#english li {
+    list-style-type: none;
+}
+#contacts li {
+    list-style-type: none;
+}
+#name img {
+    height: 70%;
+    border-radius: 50%;
+}
+#name {
+    text-align: center;
+    height: 600px;
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+}
+.footer div {
+    text-align: center;
+    margin: auto;
+}
+.footer ul {
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-around;
+    flex-direction: row;
+    list-style: none;
+    
+}
+.footer ul li {
+    text-align: center;
+    margin: auto;
+}
+.footer ul img {
+    margin: 10px;
+    height: 55px;
 }
